@@ -1,0 +1,24 @@
+{
+  "name": "Criando-ferramentas-de-linha-de-comando",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BrunoFerreira95/Criando-ferramentas-de-linha-de-comando.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BrunoFerreira95/Criando-ferramentas-de-linha-de-comando/issues"
+  },
+  "homepage": "https://github.com/BrunoFerreira95/Criando-ferramentas-de-linha-de-comando#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "mocha": "^7.1.0"
+  }
+}
