@@ -37,7 +37,7 @@ class Database {
 
     async listar(id){
         const dados = await this.obterDadosArquivo()
-        const dadosFiltrados = dados.filter(item =>(id ? (item.id === id) : true))
+        const dadosFiltrados = dados.filter(item => id ? item.id === id : true)
         return dadosFiltrados
     }
 
@@ -54,6 +54,26 @@ class Database {
 
         dados.splice(indice, 1)
         return await this.escreverArquivo(dados)
+    }
+
+    async atualizar(id, modificacoes) {
+        const dados = await this.obterDadosArquivo()
+        const indice = dados.findIndex(item => item.id === parseInt(id))
+        if(indice === -1){
+            throw Error('O heroi informado nao existe')
+        }
+
+        const atual = dados[indice]
+        const objetoAtualizar = {
+            ...atual,
+            ...modificacoes
+        }
+        dados.splice(indice, 1)
+
+        return await this.escreverArquivo([
+            ...dados,
+            objetoAtualizar
+        ])
     }
 }
 //
