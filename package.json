@@ -19,6 +19,6 @@
   "homepage": "https://github.com/BrunoFerreira95/Criando-ferramentas-de-linha-de-comando#readme",
   "dependencies": {},
   "devDependencies": {
-    "mocha": "^7.1.0"
+    "mocha": "^10.2.0"
   }
 }
